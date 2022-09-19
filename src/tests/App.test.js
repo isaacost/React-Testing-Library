@@ -70,9 +70,8 @@ describe('Testando o componente App', () => {
     );
     expect(titleNotFound).toBeInTheDocument();
 
-    const imgNotFound = screen.getByRole(
-      'img',
-      { alt: 'https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif' },
+    const imgNotFound = screen.getByAltText(
+      'Pikachu crying because the page requested was not found',
     );
     expect(imgNotFound).toBeInTheDocument();
   });
